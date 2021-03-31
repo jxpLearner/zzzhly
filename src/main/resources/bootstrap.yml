@@ -1,0 +1,4 @@
+spring:
+  profiles:
+    active: @profileActive@
+## pom.xml文件中切换dev,prod

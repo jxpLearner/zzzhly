@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: zzzhly
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.10.22.187:8848
+      config:
+        server-addr: 10.10.22.187:8848
+        file-extension: yaml
+  main:
+    allow-bean-definition-overriding: true
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+
+server:
+  port: 8081
+
+http:
+  maxTotal: 100
+  defaultMaxPerRoute: 20
+  connectTimeout: 1000
+  connectionRequestTimeout: 500
+  socketTimeout: 20000
+  staleConnectionCheckEnabled: true
+
+##聚合接口对外用户信息
+aggregation:
+  videocode: getVideoById #视频聚合接口code
+  getToken: http://10.10.22.187/api/mc-config/model/aggregation-external/getToken #聚合接口获取token地址
+  getDataUrl: http://10.10.22.187/api/mc-config/model/aggregation-external/aggregation?accessToken= #对外聚合接口查询
+  username: supconit
+  password: supconit
+
+## es中实体对应的code或id
+parkDataDetail: t_1367769288882126850   #过车记录
+parkDataId: t_1367745850586959874   #停车场基础信息
+uploadVehicleSource: t_1370209352258027521   #上报的车辆来源地数据
+vehicleSource: t_1374282036000456706 #停车场每日来源地数据
+vehicleDetail: t_1370209012699758593 #上报的车流量数据
+
+#三平景区停车场信息
+sanping:
+  appId: 10031
+  appSecret: 9d682649d9f64faeb5e4477a8e27858e
+  ipAddressUrl: https://tsktapps.keytop.cn/unite-api/api #接口地址
+  parkListUri: /config/platform/GetParkingLotList #停车场列表
