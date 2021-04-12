@@ -5,8 +5,6 @@ import com.alibaba.fastjson.JSONObject;
 import com.google.common.collect.Maps;
 import com.supconit.mc.api.ConfigClient;
 import com.supconit.zzzhly.common.ConfigClientLocal;
-import com.supconit.zzzhly.park.domain.BaseReq;
-import com.supconit.zzzhly.park.domain.FeeQueryReq;
 import com.supconit.zzzhly.park.domain.ParkListReq;
 import com.supconit.zzzhly.park.utils.OkHttpRequestUtils;
 import com.supconit.zzzhly.park.utils.SignUtils;
@@ -17,7 +15,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import springfox.documentation.spring.web.json.Json;
 
 import java.util.*;
 
@@ -35,8 +32,8 @@ public class ParkDataController {
     Logger logger = LoggerFactory.getLogger(ParkDataController.class);
 
     @Autowired
-//    private ConfigClientLocal client;
-    private ConfigClient client;
+    private ConfigClientLocal client;
+//    private ConfigClient client;
 
     /*@Value("$(sanping.appId)")
     private Integer appId;

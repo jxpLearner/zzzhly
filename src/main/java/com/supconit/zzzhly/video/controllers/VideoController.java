@@ -47,8 +47,8 @@ public class VideoController {
     @Autowired
     private HttpClientService httpClient;
     @Autowired
-    private ConfigClient client;
-//    private ConfigClientLocal client;
+//    private ConfigClient client;
+    private ConfigClientLocal client;
 
     @GetMapping(value = "getVideoById")
     @ResponseBody

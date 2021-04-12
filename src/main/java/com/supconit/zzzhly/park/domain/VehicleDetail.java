@@ -2,6 +2,8 @@ package com.supconit.zzzhly.park.domain;
 
 import lombok.Data;
 
+import java.util.Objects;
+
 /**
  * @auther: jxp
  * @date: 2021/3/29 9:53
@@ -20,4 +22,19 @@ public class VehicleDetail {
     private Integer vehicleNum;  //上报的车辆数据
     private Integer vehicleNum2; //根据过车记录统计的车辆数据
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        VehicleDetail that = (VehicleDetail) o;
+        return Objects.equals(scenicCode, that.scenicCode) &&
+                Objects.equals(dateStr, that.dateStr) &&
+                Objects.equals(hourStr, that.hourStr);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(scenicCode, dateStr, hourStr);
+    }
 }

@@ -40,8 +40,8 @@ public class UploadVehicleDataController {
     @Autowired
     private ParkService parkService;
     @Autowired
-//    private ConfigClientLocal client;
-    private ConfigClient client;
+    private ConfigClientLocal client;
+//    private ConfigClient client;
 
 
     @ResponseBody
@@ -250,7 +250,7 @@ public class UploadVehicleDataController {
             result.put("date",date);
             result.put("scenicCode",scenicCode);
             //没有具体到小时的数据，只有一个总的数据
-            if(null==map.get("hourStr")){
+            if(data2.size() == 1 && null==map.get("hourStr")){
                 result.put("total",map.get("vehicleNum"));
                 result.put("hourData",new ArrayList());
                 return;

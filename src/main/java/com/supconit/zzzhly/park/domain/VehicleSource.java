@@ -38,7 +38,7 @@ public class VehicleSource {
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(name,scenicCode, sourceName, frequency, dateStr);
+//        return Objects.hash(name,scenicCode, sourceName, frequency, dateStr);
+        return Objects.hash(scenicCode, sourceName, frequency, dateStr);
     }
 }

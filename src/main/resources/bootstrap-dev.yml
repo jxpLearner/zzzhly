@@ -37,7 +37,7 @@ aggregation:
 parkDataDetail: t_1367769288882126850   #过车记录
 parkDataId: t_1367745850586959874   #停车场基础信息
 uploadVehicleSource: t_1370209352258027521   #上报的车辆来源地数据
-vehicleSource: t_1374282036000456706 #停车场每日来源地数据
+#vehicleSource: t_1374282036000456706 #停车场每日来源地数据
 vehicleDetail: t_1370209012699758593 #上报的车流量数据
 
 #三平景区停车场信息

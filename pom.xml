@@ -52,11 +52,24 @@
             <artifactId>spring-boot-starter-data-redis</artifactId>
             <version>${spring-boot.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>2.1.0.RELEASE</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-test</artifactId>
             <version>${spring-boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-launcher</artifactId>
         </dependency>
         <!-- swagger -->
         <dependency>
@@ -76,7 +89,7 @@
             <version>4.5.13</version>
         </dependency>
         <!-- mc-config -->
-        <dependency>
+        <!--<dependency>
             <groupId>com.supconit.mc</groupId>
             <artifactId>mc-config-api</artifactId>
             <exclusions>
@@ -86,11 +99,11 @@
                 </exclusion>
             </exclusions>
             <version>1.1.2</version>
-        </dependency>
+        </dependency>-->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-            <version>2.1.0.RELEASE</version>
+            <groupId>com.supconit.mc</groupId>
+            <artifactId>mc-config-api</artifactId>
+            <version>1.1.3</version>
         </dependency>
 
         <dependency>
@@ -118,8 +131,11 @@
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
         </dependency>
-
-
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
 
     </dependencies>
     <build>
@@ -220,13 +236,24 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
+        <repository>
+            <id>maven-public</id>
+            <name>maven-public</name>
+            <url>http://172.16.2.192:8081/repository/maven-public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
     </repositories>
 
     <pluginRepositories>
         <pluginRepository>
             <id>hc-public</id>
             <name>hc public repository</name>
-            <url>http://hc.supconit.com/nexus/content/groups/public/</url>
+            <url>http://hc.supconit.com/nexus/content/groups/public</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>

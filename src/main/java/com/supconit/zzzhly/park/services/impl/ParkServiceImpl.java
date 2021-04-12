@@ -24,8 +24,8 @@ public class ParkServiceImpl implements ParkService {
     @Value("${parkDataId}")
     private String parkDataId;
     @Autowired
-//    private ConfigClientLocal client;
-    private ConfigClient client;
+    private ConfigClientLocal client;
+//    private ConfigClient client;
 
 
     public Map<String, String> getParkScenicCodeMap() {

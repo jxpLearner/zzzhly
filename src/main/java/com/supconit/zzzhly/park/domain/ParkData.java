@@ -10,6 +10,7 @@ import lombok.Data;
 @Data
 public class ParkData {
 
+    private String _id;     //更新数据时必带上的id
     private String name;    //停车场名称
     private String code;    //停车场编码
     private String scenicCode;    //所属景区编码

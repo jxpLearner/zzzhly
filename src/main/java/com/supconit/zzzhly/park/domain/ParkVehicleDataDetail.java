@@ -15,8 +15,8 @@ public class ParkVehicleDataDetail {
     private String vehicleNum;//车牌号
     private String passingTime;//过车时间
     private Integer inOrOut;//车辆进出场 1 进场 0 出场
-    private String  date;
-    private String hour;
+    private String  dateStr;
+    private String hourStr;
     private String scenicCode;//所属景区编码
 
     //辅助数据字段
